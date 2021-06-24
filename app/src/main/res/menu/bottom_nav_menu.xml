@@ -12,7 +12,7 @@
         android:title="@string/title_requests" />
 
     <item
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_account"
         android:icon="@drawable/ic_action_account"
         android:title="@string/title_account" />
 
