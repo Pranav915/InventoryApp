@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Inventory App</string>
+    <string name="title_home">Home</string>
+    <string name="title_requests">Requests</string>
+    <string name="title_account">Account</string>
+</resources>
