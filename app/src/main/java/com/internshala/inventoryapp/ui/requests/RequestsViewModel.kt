@@ -6,8 +6,6 @@ import androidx.lifecycle.ViewModel
 
 class RequestsViewModel : ViewModel() {
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Requests Fragment"
-    }
-    val text: LiveData<String> = _text
+
+
 }

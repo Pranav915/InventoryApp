@@ -3,4 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_requests">Requests</string>
     <string name="title_account">Account</string>
+    <string name="inventory_image">Inventory Image</string>
+    <string name="club_name">Club Name</string>
+    <string name="qt_required">Qt. Required : 30</string>
+    <string name="requested_item_name">Requested : Item Name</string>
 </resources>
