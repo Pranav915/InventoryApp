@@ -7,4 +7,5 @@
     <string name="club_name">Club Name</string>
     <string name="qt_required">Qt. Required : 30</string>
     <string name="requested_item_name">Requested : Item Name</string>
+    <string name="event_name">Event Name</string>
 </resources>

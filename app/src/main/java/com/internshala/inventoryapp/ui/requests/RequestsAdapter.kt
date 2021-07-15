@@ -17,6 +17,7 @@ class RequestsAdapter(val context: Context, private val itemList: ArrayList<Requ
     class RequestsViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val imgRequests: ImageView = view.findViewById(R.id.imgRequests)
         val txtRequestsClubName: TextView = view.findViewById(R.id.txtRequestsClubName)
+        val txtRequestsEventName:TextView = view.findViewById(R.id.txtRequestsEventName)
         val txtRequestsItemName: TextView = view.findViewById(R.id.txtRequestsItemName)
         val txtRequestsItemQuantity: TextView = view.findViewById(R.id.txtRequestsItemQuantity)
 
@@ -33,6 +34,7 @@ class RequestsAdapter(val context: Context, private val itemList: ArrayList<Requ
     override fun onBindViewHolder(holder: RequestsViewHolder, position: Int) {
         val request = itemList[position]
         holder.txtRequestsClubName.text = request.requestClubName
+        holder.txtRequestsEventName.text = request.requestEventName
         holder.txtRequestsItemName.text = "Requested : " + request.requestItemName
         holder.txtRequestsItemQuantity.text = "Qt. Required : " + request.requestItemQuantity
         Picasso.get().load(request.requestImage).error(R.drawable.ic_launcher_background).into(holder.imgRequests)
