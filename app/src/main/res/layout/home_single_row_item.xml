@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/homeSingleRowCardItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="6dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtInventoryName"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:padding="2dp"
+            android:text="@string/inventory_name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtInventoryAvailable"
+            android:layout_width="300sp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtInventoryName"
+            android:layout_marginTop="8dp"
+            android:padding="2dp"
+            android:text="@string/available_inventory"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

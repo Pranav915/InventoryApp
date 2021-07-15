@@ -8,4 +8,8 @@
     <string name="qt_required">Qt. Required : 30</string>
     <string name="requested_item_name">Requested : Item Name</string>
     <string name="event_name">Event Name</string>
+    <string name="create_request_content_desc">Create Request</string>
+    <string name="search_hint">Search Inventory</string>
+    <string name="inventory_name">Inventory Name</string>
+    <string name="available_inventory">Available: 20</string>
 </resources>
