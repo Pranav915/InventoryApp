@@ -1,20 +1,40 @@
 package com.internshala.inventoryapp.ui.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import com.internshala.inventoryapp.R
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.internshala.inventoryapp.databinding.FragmentHomeBinding
+import com.internshala.inventoryapp.model.Inventory
 
 class HomeFragment : Fragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
+    private lateinit var homeRecyclerView: RecyclerView
+    private lateinit var layoutManager: RecyclerView.LayoutManager
+    private lateinit var homeAdapter: HomeAdapter
+
+    private var inventoryList = arrayListOf<Inventory>(
+        Inventory("1","Camera" , "5"),
+        Inventory("2", "Arduino" , "10"),
+        Inventory("3", "LDR" , "20"),
+        Inventory("4", "Chairs", "25"),
+        Inventory("1","Camera" , "5"),
+        Inventory("2", "Arduino" , "10"),
+        Inventory("3", "LDR" , "20"),
+        Inventory("4", "Chairs", "25"),
+        Inventory("1","Camera" , "5"),
+        Inventory("2", "Arduino" , "10"),
+        Inventory("3", "LDR" , "20"),
+        Inventory("4", "Chairs", "25"),
+
+    )
+
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -24,18 +44,25 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
-
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        homeRecyclerView = binding.homeRecyclerView
+        layoutManager = LinearLayoutManager(activity)
+        homeAdapter = HomeAdapter(activity as Context, inventoryList )
+        homeRecyclerView.adapter = homeAdapter
+        homeRecyclerView.layoutManager = layoutManager
+
+        homeRecyclerView.addItemDecoration(
+            DividerItemDecoration(
+                homeAdapter.context,
+                (layoutManager as LinearLayoutManager).orientation
+            )
+        )
     }
 
     override fun onDestroyView() {
