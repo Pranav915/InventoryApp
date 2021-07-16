@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.internshala.inventoryapp.ui.home.HomeFragment"
+        android:name="com.iiti.inventoryapp.ui.home.HomeFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_requests"
-        android:name="com.internshala.inventoryapp.ui.requests.RequestsFragment"
+        android:name="com.iiti.inventoryapp.ui.requests.RequestsFragment"
         android:label="@string/title_requests"
         tools:layout="@layout/fragment_requests" />
 
     <fragment
         android:id="@+id/navigation_account"
-        android:name="com.internshala.inventoryapp.ui.account.AccountFragment"
+        android:name="com.iiti.inventoryapp.ui.account.AccountFragment"
         android:label="@string/title_account"
         tools:layout="@layout/fragment_account" />
 </navigation>

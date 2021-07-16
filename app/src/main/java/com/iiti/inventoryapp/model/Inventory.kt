@@ -1,4 +1,4 @@
-package com.internshala.inventoryapp.model
+package com.iiti.inventoryapp.model
 
 data class Inventory(
     val inventoryId:String,

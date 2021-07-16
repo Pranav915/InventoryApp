@@ -1,4 +1,4 @@
-package com.internshala.inventoryapp.ui.home
+package com.iiti.inventoryapp.ui.home
 
 import android.content.Context
 import android.os.Bundle
@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.internshala.inventoryapp.databinding.FragmentHomeBinding
-import com.internshala.inventoryapp.model.Inventory
+import com.iiti.inventoryapp.databinding.FragmentHomeBinding
+import com.iiti.inventoryapp.model.Inventory
 
 class HomeFragment : Fragment() {
 

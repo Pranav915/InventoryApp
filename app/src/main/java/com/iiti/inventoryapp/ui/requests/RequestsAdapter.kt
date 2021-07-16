@@ -1,4 +1,4 @@
-package com.internshala.inventoryapp.ui.requests
+package com.iiti.inventoryapp.ui.requests
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.internshala.inventoryapp.R
-import com.internshala.inventoryapp.model.Request
+import com.iiti.inventoryapp.R
+import com.iiti.inventoryapp.model.Request
 import com.squareup.picasso.Picasso
 
 class RequestsAdapter(val context: Context, private val itemList: ArrayList<Request>) :

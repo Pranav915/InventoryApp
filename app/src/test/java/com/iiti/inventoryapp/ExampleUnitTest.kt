@@ -1,4 +1,4 @@
-package com.internshala.inventoryapp
+package com.iiti.inventoryapp
 
 import org.junit.Test
 

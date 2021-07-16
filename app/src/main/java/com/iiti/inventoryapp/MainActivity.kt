@@ -1,4 +1,4 @@
-package com.internshala.inventoryapp
+package com.iiti.inventoryapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.internshala.inventoryapp.databinding.ActivityMainBinding
+import com.iiti.inventoryapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 

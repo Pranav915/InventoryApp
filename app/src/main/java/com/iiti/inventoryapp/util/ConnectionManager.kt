@@ -1,4 +1,4 @@
-package com.internshala.inventoryapp.util
+package com.iiti.inventoryapp.util
 
 import android.content.Context
 import android.net.ConnectivityManager

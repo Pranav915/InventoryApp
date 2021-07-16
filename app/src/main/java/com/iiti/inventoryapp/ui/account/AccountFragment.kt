@@ -1,19 +1,22 @@
-package com.internshala.inventoryapp.ui.account
+package com.iiti.inventoryapp.ui.account
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import com.internshala.inventoryapp.databinding.FragmentAccountBinding
+import com.iiti.inventoryapp.EditProfileActivity
+import com.iiti.inventoryapp.databinding.FragmentAccountBinding
 
 class AccountFragment : Fragment() {
 
     private lateinit var accountViewModel: AccountViewModel
     private var _binding: FragmentAccountBinding? = null
+    private lateinit var editProfileCardView:CardView
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -23,18 +26,21 @@ class AccountFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         accountViewModel =
             ViewModelProvider(this).get(AccountViewModel::class.java)
-
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        return binding.root
+    }
 
-        val textView: TextView = binding.textAccount
-        accountViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        return root
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        editProfileCardView = binding.editProfileCardView
+
+        editProfileCardView.setOnClickListener {
+            val intent = Intent(activity as Context , EditProfileActivity::class.java)
+            startActivity(intent)
+         }
+
     }
 
     override fun onDestroyView() {

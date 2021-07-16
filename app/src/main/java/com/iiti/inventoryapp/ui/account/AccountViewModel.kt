@@ -1,4 +1,4 @@
-package com.internshala.inventoryapp.ui.account
+package com.iiti.inventoryapp.ui.account
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
