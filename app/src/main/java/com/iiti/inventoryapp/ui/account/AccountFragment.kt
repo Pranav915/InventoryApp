@@ -14,7 +14,6 @@ import com.iiti.inventoryapp.databinding.FragmentAccountBinding
 
 class AccountFragment : Fragment() {
 
-    private lateinit var accountViewModel: AccountViewModel
     private var _binding: FragmentAccountBinding? = null
     private lateinit var editProfileCardView:CardView
 
@@ -27,8 +26,6 @@ class AccountFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        accountViewModel =
-            ViewModelProvider(this).get(AccountViewModel::class.java)
         _binding = FragmentAccountBinding.inflate(inflater, container, false)
         return binding.root
     }

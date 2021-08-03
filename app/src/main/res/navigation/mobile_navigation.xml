@@ -22,4 +22,16 @@
         android:name="com.iiti.inventoryapp.ui.account.AccountFragment"
         android:label="@string/title_account"
         tools:layout="@layout/fragment_account" />
+
+    <fragment
+        android:id="@+id/aboutApp"
+        android:name="com.iiti.inventoryapp.AboutApp"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.iiti.inventoryapp.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
