@@ -63,4 +63,10 @@
     <string name="repeat_password">Repeat Password</string>
     <string name="remember_password">Remember Password?</string>
     <string name="login">Login</string>
+
+    <string name="event_start_date">Starting Date</string>
+    <string name="event_start_time">Starting Time</string>
+    <string name="event_end_date">Ending Date</string>
+    <string name="event_end_time">Ending Time</string>
+    <string name="event_venue">Event Venue</string>
 </resources>
