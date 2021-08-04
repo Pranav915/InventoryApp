@@ -14,6 +14,7 @@ import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.iiti.inventoryapp.databinding.ActivityMainBinding
+import com.iiti.inventoryapp.ui.requests.RequestsFragment
 
 class MainActivity : AppCompatActivity() {
 

@@ -60,4 +60,7 @@
     <string name="close_drawer">Close Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="repeat_password">Repeat Password</string>
+    <string name="remember_password">Remember Password?</string>
+    <string name="login">Login</string>
 </resources>
