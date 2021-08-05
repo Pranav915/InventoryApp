@@ -25,6 +25,46 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+        <RelativeLayout
+            android:id="@+id/imgProfileLayout"
+            android:layout_width="135dp"
+            android:layout_height="135dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRegister"
+            android:layout_marginTop="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="250dp">
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:contentDescription="@string/profile_image"
+                    android:src="@drawable/default_profile_image" />
+
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnAddProfileImage"
+                tools:targetApi="lollipop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:backgroundTint="@color/white"
+                android:contentDescription="@string/edit_profile_image_content_desc"
+                android:src="@drawable/ic_baseline_edit_20"
+                app:fabSize="mini" />
+
+        </RelativeLayout>
+
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/layout_name"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -35,7 +75,7 @@
             android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtRegister"
+            app:layout_constraintTop_toBottomOf="@+id/imgProfileLayout"
             app:startIconDrawable="@drawable/ic_action_name">
 
             <com.google.android.material.textfield.TextInputEditText

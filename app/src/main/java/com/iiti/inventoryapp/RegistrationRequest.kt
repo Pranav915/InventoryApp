@@ -1,21 +1,18 @@
 package com.iiti.inventoryapp
 
-import android.app.ProgressDialog
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.util.Log
+import android.provider.MediaStore
 import android.util.Patterns
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.android.volley.AuthFailureError
-import com.android.volley.RequestQueue
-import com.android.volley.Response
-import com.android.volley.toolbox.StringRequest
-import com.android.volley.toolbox.Volley
-import org.json.JSONObject
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class RegistrationRequest : AppCompatActivity() {
 
+    private lateinit var imgProfile : ImageView
+    private lateinit var btnAddProfileImage: FloatingActionButton
     private lateinit var etName: EditText
     private lateinit var etEmail: EditText
     private lateinit var etPassword: EditText
@@ -26,6 +23,8 @@ class RegistrationRequest : AppCompatActivity() {
     private lateinit var radioGroup: RadioGroup
     private lateinit var radioButton: RadioButton
     private lateinit var btnRegister: Button
+    private val pickImage = 100
+    private var imageUri: Uri? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,10 +37,16 @@ class RegistrationRequest : AppCompatActivity() {
 
         btnRegister.setOnClickListener { performSignUp() }
 
+        btnAddProfileImage.setOnClickListener {
+            openGallery()
+        }
+
 
     }
 
     private fun viewInitializations() {
+        imgProfile = findViewById(R.id.imgProfile)
+        btnAddProfileImage = findViewById(R.id.btnAddProfileImage)
         etName = findViewById(R.id.et_name)
         etEmail = findViewById(R.id.et_email)
         etPassword = findViewById(R.id.et_password)
@@ -112,9 +117,21 @@ class RegistrationRequest : AppCompatActivity() {
         return Patterns.EMAIL_ADDRESS.matcher(email).matches()
     }
 
-    // Hook Click Event
+    private fun openGallery() {
+        val gallery = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.INTERNAL_CONTENT_URI)
+        startActivityForResult(gallery, pickImage)
+    }
 
-    fun performSignUp() {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (resultCode == RESULT_OK && requestCode == pickImage) {
+            imageUri = data?.data
+            imgProfile.setImageURI(imageUri)
+        }
+    }
+
+    // Hook Click Event
+    private fun performSignUp() {
         if (validateInput()) {
 
             // Input is valid, here send data to your server
@@ -129,7 +146,7 @@ class RegistrationRequest : AppCompatActivity() {
             val roleRequest = radioButton.text.toString()
 
 
-            Toast.makeText(this , "It worked" , Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "It worked", Toast.LENGTH_SHORT).show()
 
             // Here you can call your API
 

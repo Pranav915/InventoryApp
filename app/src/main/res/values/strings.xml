@@ -72,4 +72,5 @@
     <string name="add_new_request">Add New Request</string>
     <string name="inventory_details">Inventory Details</string>
     <string name="request_details">Request Details</string>
+    <string name="select_start_date">Select Start Date</string>
 </resources>
