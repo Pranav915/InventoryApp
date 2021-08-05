@@ -1,6 +1,7 @@
 package com.iiti.inventoryapp.ui.requests
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -62,6 +63,8 @@ class RequestsFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+
+
     }
 
     override fun onCreateView(
@@ -177,9 +180,10 @@ class RequestsFragment : Fragment() {
 //
 //
         btnCreateRequest.setOnClickListener {
-            // Respond to FAB click
-
+            val addRequestIntent = Intent(activity, com.iiti.inventoryapp.AddEventRequestActivity::class.java)
+            startActivity(addRequestIntent)
         }
    }
+
 }
 

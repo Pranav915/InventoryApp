@@ -47,9 +47,9 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/start_date_edit_text"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:inputType="date"/>
+            android:layout_height="match_parent"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 

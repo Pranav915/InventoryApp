@@ -69,4 +69,7 @@
     <string name="event_end_date">Ending Date</string>
     <string name="event_end_time">Ending Time</string>
     <string name="event_venue">Event Venue</string>
+    <string name="add_new_request">Add New Request</string>
+    <string name="inventory_details">Inventory Details</string>
+    <string name="request_details">Request Details</string>
 </resources>

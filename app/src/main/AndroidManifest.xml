@@ -14,10 +14,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MaterialComponents.Light.NoActionBar">
-        <activity android:name=".AddEventRequestActivity"></activity>
+        <activity android:name=".AddEventRequestActivity"
+            android:label="@string/add_new_request"
+            android:parentActivityName=".MainActivity">
+        </activity>
         <activity android:name=".AboutAppActivity" />
-        <activity android:name=".RequestDetailsActivity" />
-        <activity android:name=".InventoryDetailsActivity" />
+        <activity android:name=".RequestDetailsActivity"
+            android:label="@string/request_details"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".InventoryDetailsActivity"
+            android:label="@string/inventory_details"
+            android:parentActivityName=".MainActivity"/>
         <activity android:name=".MyProfileActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>

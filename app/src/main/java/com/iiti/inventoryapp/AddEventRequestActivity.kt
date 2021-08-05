@@ -16,6 +16,10 @@ class AddEventRequestActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        setSupportActionBar(binding.eventRequestActionBar)
+        title = getString(R.string.add_new_request)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         binding.eventStartDate.setOnFocusChangeListener{view, b ->
             openDatePicker()
         }
